@@ -76,19 +76,19 @@ xterm*|rxvt*)
     ;;
 esac
 
-if str="$HOSTNAME"; export str; [ "$str" = "web2.test.bill.masterhost.ru" ]; then
+if str="$HOSTNAME"; export str; [ "$str" = "web2.test.host.ru" ]; then
 export str="web2.test";
 #10m
 PS1="[\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;10m\]"$str    "\[$(tput sgr0)\]\[\033[38;5;15m\]]:[\[$(tput sgr0)\]\[\033[38;5;81m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]]: \[$(t    put sgr0)\]";
-elif str="$HOSTNAME"; export str; [ "$str" = "web2.patch.bill.masterhost.ru" ]; then
+elif str="$HOSTNAME"; export str; [ "$str" = "web2.patch.host.ru" ]; then
 export str="web2.patch";
 #135m
 PS1="[\[$(tput sgr0)\]\[\033[38;5;147m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;147m\]"$s    tr"\[$(tput sgr0)\]\[\033[38;5;15m\]]:[\[$(tput sgr0)\]\[\033[38;5;81m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]]: \[$    (tput sgr0)\]";
-elif str="$HOSTNAME"; export str; [ "$str" = "adm3.hq.infra.masterhost.ru" ]; then
+elif str="$HOSTNAME"; export str; [ "$str" = "adm3.hq.host.ru" ]; then
 export str="adm3.hq.infra";
 #208m
 PS1="[\[$(tput sgr0)\]\[\033[38;5;223m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;223m\]"$s    tr"\[$(tput sgr0)\]\[\033[38;5;15m\]]:[\[$(tput sgr0)\]\[\033[38;5;81m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]]: \[$    (tput sgr0)\]"
-elif str="$HOSTNAME"; export str; [ "$str" = "web3.test.bill.masterhost.ru" ]; then
+elif str="$HOSTNAME"; export str; [ "$str" = "web3.test.host.ru" ]; then
 export str="web3.test";
 #10m
 PS1="[\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;10m\]"$str    "\[$(tput sgr    0)\]\[\033[38;5;15m\]]:[\[$(tput sgr0)\]\[\033[38;5;81m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]]: \    [$(tput sgr0)\]"
@@ -115,11 +115,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias unesc='while read -r line; do echo -e $line; done'
-alias stest='ssh nvsmirnova@web2.int.test.bill.masterhost.ru'
-alias spatch='ssh nvsmirnova@web2.int.patch.bill.masterhost.ru'
-alias stest2='ssh nvsmirnova@web3.int.test.bill.masterhost.ru'
-alias ssale='ssh nvsmirnova@web3.int.site.masterhost.ru'
-alias sas='ssh nvsmirnova@as2.test.bill.masterhost.ru'
+alias stest='ssh nvsmirnova@web2.inthost.ru'
+alias spatch='ssh nvsmirnova@web2.int.host.ru'
+alias sas='ssh nvsmirnova@as2.test.hostt.ru'
 alias sbill='sudo -iu billing bash --rcfile /home/nvsmirnova/.bashrc'
 alias svim='vim -u /home/nvsmirnova/.vimrc'
 alias restart='sudo /usr/sbin/apache2ctl graceful'
